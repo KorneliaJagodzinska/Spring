@@ -13,6 +13,12 @@
         Size Y:<input type="number" step="1" min="1" name="sizeY">
         <input type="submit">
     </form>
+    <hr>
+    <table>
+        <tr th:each="row : ${#numbers.sequence(1,10)}">
+
+        </tr>
+    </table>
 </div>
 
 <div th:replace="pagefragments :: footer_scripts"/>
