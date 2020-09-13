@@ -1,7 +1,9 @@
 package com.sda.javagda31.student.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,6 +17,10 @@ public class IndexController {
     @GetMapping("/calculator")
     public String getCalculator(){
         return "calculator";
+    }
+    @PostMapping("/calculator")
+    public String displayCalculator(Model model, Integer sizeX, Integer sizeY){
+
     }
 
 }
