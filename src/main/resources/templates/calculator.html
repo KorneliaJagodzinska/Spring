@@ -15,7 +15,10 @@
     </form>
     <hr>
     <table>
-        <tr th:each="row : ${#numbers.sequence(1,10)}">
+        <tr th:each="row : ${#numbers.sequence(1,rowNumber)}">
+            <td th:each="col : ${#numbers.sequence(1, colNumber)}">
+
+            </td>
 
         </tr>
     </table>
