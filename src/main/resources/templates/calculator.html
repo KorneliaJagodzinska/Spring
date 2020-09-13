@@ -17,9 +17,8 @@
     <table>
         <tr th:each="row : ${#numbers.sequence(1,rowNumber)}">
             <td th:each="col : ${#numbers.sequence(1, colNumber)}">
-
+                <span th:text="${row*col}"></span>
             </td>
-
         </tr>
     </table>
 </div>
