@@ -14,7 +14,7 @@
         <input type="submit">
     </form>
     <hr>
-    <table>
+    <table th:if="${rowNumber!=null && colNumber!=null}">
         <tr th:each="row : ${#numbers.sequence(1,rowNumber)}">
             <td th:each="col : ${#numbers.sequence(1, colNumber)}">
                 <span th:text="${row*col}"></span>
