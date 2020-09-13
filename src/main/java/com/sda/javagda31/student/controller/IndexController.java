@@ -11,16 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class IndexController {
 
     @GetMapping("/")
-    public String getIndexPage(){
+    public String getIndexPage() {
         return "index";
     }
+
     @GetMapping("/calculator")
-    public String getCalculator(){
+    public String getCalculator() {
         return "calculator";
     }
-    @PostMapping("/calculator")
-    public String displayCalculator(Model model, Integer sizeX, Integer sizeY){
 
+    @PostMapping("/calculator")
+    public String displayCalculator(Model model, Integer sizeX, Integer sizeY) {
+        model.addAttribute("rowNumber", sizeY);
+        model.addAttribute("colNumber", sizeX);
+        return "calculator";
     }
 
 }
